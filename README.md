@@ -7,7 +7,7 @@ Supports two methods:
 - **Sixel** — true pixel rendering, works in WezTerm, Windows Terminal, and most modern terminal emulators
 - **Half-block** — uses Unicode block characters and ANSI color codes, works in any terminal with color support
 
-https://github.com/Baekdal/Inline-Terminal-image-viewer/blob/main/README.md
+![Terminal output](terminal.png)
 
 ## Requirements
 
