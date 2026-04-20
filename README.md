@@ -1,4 +1,4 @@
-# terminal-display
+# Inline image terminal display
 
 A Python function that renders images directly in the terminal — no popup windows, no temp files.
 
@@ -31,6 +31,21 @@ display("image.jpg", pixel_width=800)             # larger output
 display("image.jpg", method="halfblock")          # use half-block instead of sixel
 display("image.jpg", method="halfblock", term_width=120)  # set character width
 ```
+
+
+## Usage for display multiple images next to each other 
+
+```python
+# from a file path
+display_compare("image1.jpg", "image2.jpg")
+
+# options
+display_compare("image1.jpg", "image2.jpg, pixel_width=800)             # larger output
+display_compare("image1.jpg", "image2.jpg, method="halfblock")          # use half-block instead of sixel
+display_compare("image1.jpg", "image2.jpg, method="halfblock", term_width=120)  # set character width
+```
+
+![Terminal output](terminal2.png)
 
 ### Inline matplotlib graphs
 
