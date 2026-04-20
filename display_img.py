@@ -1,3 +1,9 @@
+import os
+from PIL import Image, ImageFile, UnidentifiedImageError
+import numpy as np
+import sys
+ImageFile.LOAD_TRUNCATED_IMAGES = True
+
 def display(img, pixel_width=400, method='sixel', term_width=80):
 	# accept file path or PIL Image
 	if isinstance(img, (str, bytes)):
