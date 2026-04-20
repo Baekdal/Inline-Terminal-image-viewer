@@ -8,6 +8,7 @@ Supports two methods:
 - **Half-block** — uses Unicode block characters and ANSI color codes, works in any terminal with color support
 
 ![Terminal output](terminal.png)
+![Terminal output](terminal1.png)
 
 ## Requirements
 
