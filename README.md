@@ -43,6 +43,9 @@ display_compare("image1.jpg", "image2.jpg")
 display_compare("image1.jpg", "image2.jpg, pixel_width=800)             # larger output
 display_compare("image1.jpg", "image2.jpg, method="halfblock")          # use half-block instead of sixel
 display_compare("image1.jpg", "image2.jpg, method="halfblock", term_width=120)  # set character width
+
+# or use the raw image data
+display_compare(img1, img2, pixel_width=800)  
 ```
 
 ![Terminal output](terminal2.png)
