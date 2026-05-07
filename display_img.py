@@ -34,7 +34,7 @@ def display(img, pixel_width=400, method='sixel', term_width=80):
 
 		quantized   = img.quantize(colors=256, method=Image.Quantize.MEDIANCUT)
 		palette_raw = quantized.getpalette()
-
+		num_colors = len(palette_raw) // 3
 		index_arr = np.frombuffer(quantized.tobytes(), dtype=np.uint8).reshape(pixel_height, pixel_width)
 
 		ESC = "\033"
@@ -44,7 +44,7 @@ def display(img, pixel_width=400, method='sixel', term_width=80):
 		out = []
 		out.append(DCS + '7;1;q"1;1')
 
-		for i in range(256):
+		for i in range(num_colors):
 			r, g, b = palette_raw[i*3], palette_raw[i*3+1], palette_raw[i*3+2]
 			out.append(f"#{i};2;{round(r*100/255)};{round(g*100/255)};{round(b*100/255)}")
 
